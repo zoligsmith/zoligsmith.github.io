@@ -21,7 +21,7 @@ body {
   color: #002d72;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero {
 
@@ -63,7 +63,7 @@ body {
   filter: blur(2px) saturate(0.9);
 }
 
-/* JHU LOGO */
+/* HOPKINS LOGO */
 
 .hero-logo-bg {
 
@@ -89,7 +89,7 @@ body {
   opacity: 0.06;
 }
 
-/* OVERLAY */
+/* LIGHT OVERLAY */
 
 .hero-overlay {
 
@@ -108,7 +108,7 @@ body {
   z-index: 2;
 }
 
-/* CONTAINER */
+/* MAIN CONTENT */
 
 .hero-container {
 
@@ -124,20 +124,25 @@ body {
 
   display: grid;
 
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
 
   gap: 70px;
 
   align-items: center;
 }
 
-/* LEFT */
+/* LEFT SIDE */
+
+.hero-left {
+
+  max-width: 760px;
+}
 
 .hero h1 {
 
   font-family: 'Playfair Display', serif;
 
-  font-size: clamp(84px, 10vw, 180px);
+  font-size: clamp(84px, 10vw, 170px);
 
   line-height: 0.88;
 
@@ -148,10 +153,10 @@ body {
 
 .hero h1 span {
 
-  color: #002d72;
-
   font-style: italic;
 }
+
+/* ROLE */
 
 .hero-role {
 
@@ -167,14 +172,12 @@ body {
 
   color: #003b95;
 
-  max-width: 850px;
-
   margin-bottom: 34px;
 }
 
-.hero-description {
+/* DESCRIPTION */
 
-  max-width: 760px;
+.hero-description {
 
   font-size: 20px;
 
@@ -208,13 +211,13 @@ body {
 
   border-radius: 999px;
 
-  border: 1.5px solid rgba(0,45,114,0.18);
+  border: 1.5px solid rgba(0,45,114,0.15);
 
-  background: rgba(255,255,255,0.82);
+  background: rgba(255,255,255,0.85);
 
   backdrop-filter: blur(12px);
 
-  transition: 0.25s;
+  transition: all 0.25s ease;
 
   font-weight: 500;
 
@@ -232,7 +235,7 @@ body {
   border-color: #002d72;
 
   box-shadow:
-    0 12px 30px rgba(0,45,114,0.16);
+    0 12px 30px rgba(0,45,114,0.18);
 }
 
 /* TAGS */
@@ -252,9 +255,9 @@ body {
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.88);
 
-  border: 1px solid rgba(0,45,114,0.14);
+  border: 1px solid rgba(0,45,114,0.12);
 
   color: #003b95;
 
@@ -262,7 +265,7 @@ body {
 
   font-size: 12px;
 
-  transition: 0.25s;
+  transition: all 0.25s ease;
 }
 
 .hero-tags span:hover {
@@ -272,7 +275,7 @@ body {
   color: white;
 }
 
-/* RIGHT */
+/* RIGHT SIDE */
 
 .hero-right {
 
@@ -340,9 +343,15 @@ body {
   .image-frame {
 
     width: 100%;
+
     max-width: 360px;
 
     height: 460px;
+  }
+
+  .hero-buttons {
+
+    justify-content: flex-start;
   }
 
 }
