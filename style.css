@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -13,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── HERO ── */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -21,12 +22,11 @@ body {
   align-items: center;
   justify-content: center;
   padding: 80px 8%;
-  overflow: hidden;
   background: #f4f6fb;
+  overflow: hidden;
 }
 
-/* ── SHIELD WATERMARK ── */
-.bg-shield {
+.shield {
   position: absolute;
   inset: 0;
   display: flex;
@@ -36,15 +36,14 @@ body {
   z-index: 0;
 }
 
-.bg-shield img {
-  width: 60%;
-  max-width: 680px;
+.shield img {
+  width: 58%;
+  max-width: 660px;
   opacity: 0.055;
   object-fit: contain;
 }
 
-/* ── TWO-COLUMN GRID ── */
-.hero-grid {
+.container {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -55,11 +54,9 @@ body {
   gap: 80px;
 }
 
-/* ── LEFT COLUMN ── */
-.hero-left {
+.left {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 h1 {
@@ -92,12 +89,10 @@ h1 em {
   max-width: 640px;
 }
 
-/* ── BUTTONS ── */
 .btns {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 32px;
 }
 
 .btn {
@@ -122,39 +117,14 @@ h1 em {
   box-shadow: 0 10px 24px rgba(0,45,114,0.18);
 }
 
-/* ── TAGS ── */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tags span {
-  padding: 9px 15px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.86);
-  border: 1px solid rgba(0,45,114,0.12);
-  color: #003b95;
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  transition: all 0.22s ease;
-  cursor: default;
-}
-
-.tags span:hover {
-  background: #002d72;
-  color: white;
-}
-
-/* ── RIGHT COLUMN — PHOTO ── */
-.hero-right {
+.right {
   width: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.photo-frame {
+.frame {
   width: 420px;
   height: 540px;
   padding: 12px;
@@ -173,19 +143,18 @@ h1 em {
   display: block;
 }
 
-/* ── MOBILE ── */
 @media (max-width: 960px) {
   .hero {
     padding: 80px 6%;
   }
 
-  .hero-grid {
+  .container {
     grid-template-columns: 1fr;
     gap: 48px;
     text-align: center;
   }
 
-  .hero-right {
+  .right {
     width: 100%;
     justify-content: center;
   }
@@ -203,11 +172,7 @@ h1 em {
     justify-content: center;
   }
 
-  .tags {
-    justify-content: center;
-  }
-
-  .photo-frame {
+  .frame {
     width: 300px;
     height: 380px;
   }
