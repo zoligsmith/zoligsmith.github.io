@@ -135,23 +135,25 @@ body {
 
   width: 100%;
 
-  max-width: 1450px;
+  max-width: 1400px;
 
   margin: 0 auto;
 
-  display: grid;
+  display: flex;
 
-  grid-template-columns: 1.1fr 0.9fr;
+  justify-content: space-between;
 
   align-items: center;
 
-  gap: 90px;
+  gap: 80px;
 
 }
 
 /* LEFT SIDE */
 
 .hero-left {
+
+  flex: 1;
 
   max-width: 760px;
 
@@ -163,9 +165,9 @@ body {
 
   font-family: 'Playfair Display', serif;
 
-  font-size: clamp(80px, 8vw, 150px);
+  font-size: clamp(72px, 7vw, 120px);
 
-  line-height: 0.88;
+  line-height: 0.95;
 
   color: #002d72;
 
@@ -277,11 +279,15 @@ body {
 
 .hero-right {
 
+  flex-shrink: 0;
+
   display: flex;
 
   justify-content: center;
 
   align-items: center;
+
+  margin-top: 40px;
 
 }
 
@@ -289,9 +295,9 @@ body {
 
 .image-frame {
 
-  width: 460px;
+  width: 420px;
 
-  height: 590px;
+  height: 540px;
 
   padding: 12px;
 
@@ -332,17 +338,17 @@ body {
 
   .hero-container {
 
-    grid-template-columns: 1fr;
-
-    gap: 60px;
+    flex-direction: column;
 
     text-align: center;
+
+    gap: 60px;
 
   }
 
   .hero-right {
 
-    order: -1;
+    margin-top: 0;
 
   }
 
